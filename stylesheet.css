@@ -1,0 +1,69 @@
+/*STYLESHEET*/
+.background {
+  width: 500px;
+  height: 500px;
+  background: rgb(180, 92, 60);
+}
+
+.line#yAxis {
+  width: 5px;
+  height: 490px;
+  background: black;
+  position: relative;
+  left: 10px;
+  bottom: 0px;
+}
+
+.line#xAxis {
+  width: 490px;
+  height: 5px;
+  background: black;
+  position: relative;
+  left: 10px;
+  bottom: 0px;
+}
+
+.lineMarker#LM1 {
+  width: 5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  left: 100px;
+  bottom: -5px;
+}
+
+.lineMarker#LM2 {
+  width: 5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  left: 200px;
+  bottom: -5px;
+}
+
+.lineMarker#LM3 {
+  width: 5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  left: 300px;
+  bottom: -5px;
+}
+
+.lineMarker#LM4 {
+  width: 5px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  left: 400px;
+  bottom: -5px;
+}
+
+.square {
+  width: 90px;
+  height: 300px;
+  background: orchid;
+  position: absolute;
+  bottom: 5px;
+  left: 5px
+}
