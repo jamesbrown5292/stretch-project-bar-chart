@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <script type="text/javascript" src="./chart-generator.js"></script>
+
   <script type="text/javascript" src="https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz"></script>
   <link href="stylesheet.css" rel="stylesheet">
 </head>
@@ -21,12 +22,12 @@
       create a data set, then watch as your graph appears.
     </p>
 
-    <input type="text" placeholder="My Bar Chart">
-    <input type="submit">
+    <input type="text" id="titleButtonInput"  placeholder="My Bar Chart">
+    <input type="button" id="titleButton" onclick="createTitle()" value="Add Title">
 
     <p>Now, give your data series a title. This might be, for example, "types of fruit" or "dietary preferences"</p>
-    <input type="text" placeholder="My Data Series">
-    <input type="submit">
+    <input type="text" id="seriesTitleInput"placeholder="My Data Series">
+    <input type="button" id="seriesTitleButton" onclick="createSeriesTitle()" value="Add Data Series Title">
 
     <p>Next, we need to enter some data. Use the input fields below to enter a category and a value for that category. For example, you might enter "apples, 13" or "pescatarians, 20"</p>
     <p>Data item:
@@ -40,6 +41,6 @@
     <input type="button" value="Generate Graph!">
 
   </main>
-
+  <script type="text/javascript" src="./handlers.js"></script>
 </body>
 </html>
