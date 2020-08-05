@@ -11,6 +11,7 @@ let createTitle = function(){
     titleTag.setAttribute("id", "chartTitle");
     document.getElementById("titleButton").setAttribute("value", "Change Title")
   }
+  document.getElementById("titleButtonInput").value = "";
 }
 
 
@@ -45,21 +46,29 @@ let createSeriesTitle = function(){
     tableDataItem.setAttribute("id", "tableDataValue");
 
   }
-
-
+  document.getElementById("seriesTitleInput").value = "";
 }
-
 let submitData = function (){
   let table = document.getElementsByTagName("table");
   let newRow = document.createElement("tr");
   newRow = table[0].appendChild(newRow);
+  newRow.ondblclick = function(){
+    newRow.parentNode.removeChild(newRow);
+  }
   let newItem = document.createElement("td");
   let inputText = document.getElementById("dataItemInput").value;
   newItem = newRow.appendChild(newItem);
   newItem.innerHTML = inputText;
+  itemsArray.push(inputText)
 
   let newValue = document.createElement("td");
   let inputValue = document.getElementById("dataValueInput").value;
   newValue = newRow.appendChild(newValue);
   newValue.innerHTML = inputValue;
+  valuesArray.push(inputValue);
+
+  document.getElementById("dataItemInput").value = "";
+  document.getElementById("dataValueInput").value = "";
+
 }
+

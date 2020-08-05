@@ -16,3 +16,6 @@ let drawAxes = function(){
   background.appendChild(yAxis);
   background.appendChild(xAxis);
 }
+
+let itemsArray = [];
+let valuesArray = [];
