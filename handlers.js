@@ -27,6 +27,20 @@ createSeriesTitle = function(){
     let headingRow = document.createElement("th");
     headingRow = table.appendChild(headingRow);
     headingRow.innerHTML = seriesTitle;
+    headingRow.setAttribute("id", "seriesTitle");
+    headingRow.setAttribute("colspan", "2");
+
+    let row = document.createElement("tr")
+    firstRow = table.appendChild(row);
+
+    let tableDataItem = document.createElement("td");
+    tableDataItem = firstRow.appendChild(tableDataItem);
+    tableDataItem.innerHTML = "Data item e.g. Apples";
+
+    let tableDataValue = document.createElement("td");
+    tableDataItem = firstRow.appendChild(tableDataValue);
+    tableDataValue.innerHTML = "Value e.g. 12";
+
   }
 
 }
