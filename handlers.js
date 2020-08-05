@@ -23,6 +23,7 @@ createSeriesTitle = function(){
 
   else if (document.getElementById("seriesTitle") == null){
     let table = document.createElement("table");
+    table.setAttribute("value", 0);
     table = document.querySelector("Main").appendChild(table);
     let headingRow = document.createElement("th");
     headingRow = table.appendChild(headingRow);
@@ -36,11 +37,41 @@ createSeriesTitle = function(){
     let tableDataItem = document.createElement("td");
     tableDataItem = firstRow.appendChild(tableDataItem);
     tableDataItem.innerHTML = "Data item e.g. Apples";
+    tableDataItem.setAttribute("id", "tableDataItem");
 
     let tableDataValue = document.createElement("td");
     tableDataItem = firstRow.appendChild(tableDataValue);
     tableDataValue.innerHTML = "Value e.g. 12";
+    tableDataItem.setAttribute("id", "tableDataValue");
 
   }
 
+}
+
+submitData = function (){
+  let table = document.getElementsByTagName("table");
+  let count = table.;
+  if (count === 0){
+    let inputDataItem = document.getElementById("dataItemInput").value;
+    let tableDataItem = document.getElementById("tableDataItem");
+    tableDataItem.innerHTML = inputDataItem;
+
+    let inputDataValue = document.getElementById("dataValueInput").value;
+    let tableDataValue = document.getElementById("tableDataValue");
+    tableDataValue.innerHTML = inputDataValue;
+
+    document.getElementsByTagName("table").value += 1;
+  } else if (count > 0){
+    let row = document.createElement("tr");
+    row = table.appendChild(row);
+
+    let inputDataItem = document.getElementById("dataItemInput").value;
+    let tableDataItem = document.getElementById("tableDataItem");
+    tableDataItem.innerHTML = inputDataItem;
+
+    let inputDataValue = document.getElementById("dataValueInput").value;
+    let tableDataValue = document.getElementById("tableDataValue");
+    tableDataValue.innerHTML = inputDataValue;
+
+  }
 }
