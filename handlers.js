@@ -1,4 +1,4 @@
-createTitle = function(){
+let createTitle = function(){
   let title = document.getElementById("titleButtonInput").value;
 
   if (document.contains(document.getElementById("chartTitle"))){
@@ -14,7 +14,7 @@ createTitle = function(){
 }
 
 
-createSeriesTitle = function(){
+let createSeriesTitle = function(){
   let seriesTitle = document.getElementById("seriesTitleInput").value;
 
   if (document.contains(document.getElementById("seriesTitle"))){
@@ -46,32 +46,20 @@ createSeriesTitle = function(){
 
   }
 
+
 }
 
-submitData = function (){
+let submitData = function (){
   let table = document.getElementsByTagName("table");
-  let count = table.;
-  if (count === 0){
-    let inputDataItem = document.getElementById("dataItemInput").value;
-    let tableDataItem = document.getElementById("tableDataItem");
-    tableDataItem.innerHTML = inputDataItem;
+  let newRow = document.createElement("tr");
+  newRow = table[0].appendChild(newRow);
+  let newItem = document.createElement("td");
+  let inputText = document.getElementById("dataItemInput").value;
+  newItem = newRow.appendChild(newItem);
+  newItem.innerHTML = inputText;
 
-    let inputDataValue = document.getElementById("dataValueInput").value;
-    let tableDataValue = document.getElementById("tableDataValue");
-    tableDataValue.innerHTML = inputDataValue;
-
-    document.getElementsByTagName("table").value += 1;
-  } else if (count > 0){
-    let row = document.createElement("tr");
-    row = table.appendChild(row);
-
-    let inputDataItem = document.getElementById("dataItemInput").value;
-    let tableDataItem = document.getElementById("tableDataItem");
-    tableDataItem.innerHTML = inputDataItem;
-
-    let inputDataValue = document.getElementById("dataValueInput").value;
-    let tableDataValue = document.getElementById("tableDataValue");
-    tableDataValue.innerHTML = inputDataValue;
-
-  }
+  let newValue = document.createElement("td");
+  let inputValue = document.getElementById("dataValueInput").value;
+  newValue = newRow.appendChild(newValue);
+  newValue.innerHTML = inputValue;
 }
