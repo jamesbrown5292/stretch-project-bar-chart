@@ -17,6 +17,23 @@ let drawAxes = function(){
   background.appendChild(xAxis);
 }
 
+let addScale = function(values){
+  let maxVal  =0;
+  for (let i=0; i<values.length; i++){
+    if (values[i] > maxVal){
+      maxVal = values[i];
+    }
+  }
+  let power = Math.floor(Math.log(n)/Math.LN10)
+  let order = Math.pow(10, power);
+  let scaleMax = order * (n / order);
+
+  }
+
+  let scaleMax = Math.ceil(n/order) * order;
+  return scale;
+}
+
 let itemsArray = [];
 let valuesArray = [];
 
