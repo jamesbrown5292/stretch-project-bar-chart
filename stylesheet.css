@@ -67,3 +67,12 @@
   bottom: 5px;
   left: 5px
 }
+
+.bar {
+  width: 50px;
+  height: 100px;
+  background: orchid;
+  position: absolute;
+  bottom: 5px;
+  left: 5px
+}

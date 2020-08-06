@@ -30,7 +30,7 @@
     <input type="button" id="seriesTitleButton" onclick="createSeriesTitle()" value="Add Data Series Title">
 
     <p>Next, we need to enter some data. Use the input fields below to enter a category and a value for that category. For example, you might enter "apples, 13" or "pescatarians, 20"</p>
-    <p>If you want to delete an item from your data series, just double either the item or its corresponding value.</p>
+    <p>If you want to delete an item from your data series, just double click either the item or its corresponding value.</p>
     <p>Data item:
       <input type="text"  placeholder="e.g. Apples" id="dataItemInput" >
       Value:
@@ -39,7 +39,7 @@
 
     </p>
     <p>When you have finished creating your data series, click "Generate Graph" to see your graph.</p>
-    <input type="button" value="Generate Graph!">
+    <input type="button" value="Generate Graph!" id="generateGraphButton" onclick="generateGraph()">
 
   </main>
   <script type="text/javascript" src="./handlers.js"></script>

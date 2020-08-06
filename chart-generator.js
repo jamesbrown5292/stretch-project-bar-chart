@@ -19,3 +19,17 @@ let drawAxes = function(){
 
 let itemsArray = [];
 let valuesArray = [];
+
+let addBars = function(items, values){
+  for (let i=0; i<items.length; i++){
+    let value = values[i];
+    let label = items[i]
+    function drawBar (value, label){
+      let xAxis = document.getElementById(xAxis);
+      let newDiv = document.createElement("div");
+      newDiv = xAxis.appendChild(newDiv);
+      newDiv.setAttribute("id", `bar${i}`);
+      newDiv.setAttribute("class", "bar");
+    };
+  }
+}
