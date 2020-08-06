@@ -17,18 +17,16 @@ let drawAxes = function(){
   background.appendChild(xAxis);
 }
 
-let addScale = function(values){
-  let maxVal  =0;
-  for (let i=0; i<=values.length; i++){
-    if (values[i] > maxVal){
-      maxVal = values[i];
+let addScale = function(){
+  let maxVal  = valuesArray[0];
+  for (let i=1; i<= valuesArray.length; i++){
+    if (valuesArray[i] > maxVal){
+      maxVal = valuesArray[i];
     }
-  }
-  console.log(maxVal)
+  };
   let power = Math.floor(Math.log(maxVal)/Math.LN10)
   let order = Math.pow(10, power);
-  let scaleMax = Math.ceil(maxVal/order) * order;
-  console.log(scaleMax);
+  let scaleMax = Math.ceil(maxVal/order) * order
 }
 
 let itemsArray = [];
