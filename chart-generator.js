@@ -19,19 +19,16 @@ let drawAxes = function(){
 
 let addScale = function(values){
   let maxVal  =0;
-  for (let i=0; i<values.length; i++){
+  for (let i=0; i<=values.length; i++){
     if (values[i] > maxVal){
       maxVal = values[i];
     }
   }
-  let power = Math.floor(Math.log(n)/Math.LN10)
+  console.log(maxVal)
+  let power = Math.floor(Math.log(maxVal)/Math.LN10)
   let order = Math.pow(10, power);
-  let scaleMax = order * (n / order);
-
-  }
-
-  let scaleMax = Math.ceil(n/order) * order;
-  return scale;
+  let scaleMax = Math.ceil(maxVal/order) * order;
+  console.log(scaleMax);
 }
 
 let itemsArray = [];
