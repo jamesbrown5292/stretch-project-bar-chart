@@ -1,78 +1,16 @@
 /*STYLESHEET*/
-.background {
-  width: 500px;
-  height: 500px;
-  background: rgb(180, 92, 60);
-}
 
-.line#yAxis {
-  position: relative;
-  left: 10px;
-  bottom: 0px;
+#yAxis {
   height: 500px;
   width: 5px;
-  background-color: black;
+  background: black;
+
 }
 
-.line#xAxis {
-  position: relative;
-  left: 10px;
-  bottom: 0px;
+#xAxis {
   height: 5px;
   width: 500px;
-  background-color: black;
-}
-
-.lineMarker#LM1 {
-  width: 5px;
-  height: 20px;
   background: black;
   position: absolute;
-  left: 100px;
-  bottom: -5px;
 }
 
-.lineMarker#LM2 {
-  width: 5px;
-  height: 20px;
-  background: black;
-  position: absolute;
-  left: 200px;
-  bottom: -5px;
-}
-
-.lineMarker#LM3 {
-  width: 5px;
-  height: 20px;
-  background: black;
-  position: absolute;
-  left: 300px;
-  bottom: -5px;
-}
-
-.lineMarker#LM4 {
-  width: 5px;
-  height: 20px;
-  background: black;
-  position: absolute;
-  left: 400px;
-  bottom: -5px;
-}
-
-.square {
-  width: 90px;
-  height: 300px;
-  background: orchid;
-  position: absolute;
-  bottom: 5px;
-  left: 5px
-}
-
-.bar {
-  width: 50px;
-  height: 100px;
-  background: orchid;
-  position: absolute;
-  bottom: 5px;
-  left: 5px
-}
