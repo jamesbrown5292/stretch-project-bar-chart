@@ -56,5 +56,5 @@ let addLabel = function(i){
   newDiv.setAttribute(`id`, `dataLabel ${i}`);
   newDiv.setAttribute("class", "dataLabel");
   document.getElementById(`bar ${i}`).appendChild(newDiv);
-  document.getElementById(`dataLabel ${i}`).innerHTML = valuesArray[i];
+  document.getElementById(`dataLabel ${i}`).innerHTML = itemsArray[i];
 }

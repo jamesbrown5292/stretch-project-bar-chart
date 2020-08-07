@@ -79,7 +79,7 @@ let generateGraph = function(){
   let yAxis = drawYAxis();
   let xAxis = drawXAxis();
   maxVal = valuesArray[0];
-  for (let i=0; i<=valuesArray.length; i++){
+  for (let i=0; i<valuesArray.length; i++){
     let newBar = addBar();
     document.getElementById("bar").setAttribute(`id`, `bar ${i}`)
     document.getElementById(`bar ${i}`).style.position = "absolute";
