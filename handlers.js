@@ -1,3 +1,6 @@
+let valuesArray = [];
+let itemsArray = [];
+let maxVal = [];
 let createTitle = function(){
   let title = document.getElementById("titleButtonInput").value;
 
@@ -73,18 +76,22 @@ let submitData = function (){
 }
 
 let generateGraph = function(){
-  drawYAxis();
-  drawXAxis();
-  for (let i=0; i<valuesArray.length; i++){
+  let yAxis = drawYAxis();
+  let xAxis = drawXAxis();
+  maxVal = valuesArray[0];
+  for (let i=0; i<=valuesArray.length; i++){
     let newBar = addBar();
     document.getElementById("bar").setAttribute(`id`, `bar ${i}`)
     document.getElementById(`bar ${i}`).style.position = "absolute";
     document.getElementById(`bar ${i}`).style.left =  `${leftOffset}px`;
     document.getElementById(`bar ${i}`).style.bottom =  "5px";
     let scaleMax = addScale();
+    if (valuesArray[i] > maxVal){
+      maxVal = valuesArray[i];
+    }
     let barHeightUnit = 500 / scaleMax;
     let barHeight = valuesArray[i] * barHeightUnit;
     document.getElementById(`bar ${i}`).style.height =  `${barHeight}px`;
-    leftOffset += 50;
+    leftOffset += 54;
   };
 }
