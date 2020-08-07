@@ -33,3 +33,12 @@ let addScale = function(){
   let scaleMax = Math.ceil(maxVal/order) * order
   return scaleMax;
 };
+
+// 3. add a data bar to the chart
+let addBar = function (){
+  let newDiv = createDiv();
+  newDiv.setAttribute("class", "bar");
+  document.getElementById("xAxis").appendChild(newDiv);
+
+
+}

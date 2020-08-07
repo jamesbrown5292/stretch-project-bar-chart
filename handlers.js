@@ -75,4 +75,8 @@ let submitData = function (){
 let generateGraph = function(){
   drawYAxis();
   drawXAxis();
+  for (let i=0; i<valuesArray.length; i++){
+    let newBar = addBar();
+    newBar.setAttribute("id", "bar" + i)
+  };
 }
