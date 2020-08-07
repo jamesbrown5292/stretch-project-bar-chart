@@ -4,6 +4,7 @@
 let itemsArray = [];
 let valuesArray = [];
 let defaultWidth = 5;
+let leftOffset = 5;
 let createDiv = function(){return document.createElement("div")};
 
 //1. Draw a line representing the y-axis
@@ -20,7 +21,7 @@ let drawXAxis = function(){
   document.getElementsByTagName("main")[0].appendChild(newDiv);
 }
 
-// 2. Determine the max value of the yAxis
+// 2. Determine the max value of the yAxis, divide the y axis up into units
 let addScale = function(){
   let maxVal  = valuesArray[0];
   for (let i=1; i<= valuesArray.length; i++){
@@ -39,6 +40,6 @@ let addBar = function (){
   let newDiv = createDiv();
   newDiv.setAttribute("class", "bar");
   document.getElementById("xAxis").appendChild(newDiv);
-
+  newDiv.setAttribute(`id`, `bar`);
 
 }

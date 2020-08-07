@@ -77,6 +77,14 @@ let generateGraph = function(){
   drawXAxis();
   for (let i=0; i<valuesArray.length; i++){
     let newBar = addBar();
-    newBar.setAttribute("id", "bar" + i)
+    document.getElementById("bar").setAttribute(`id`, `bar ${i}`)
+    document.getElementById(`bar ${i}`).style.position = "absolute";
+    document.getElementById(`bar ${i}`).style.left =  `${leftOffset}px`;
+    document.getElementById(`bar ${i}`).style.bottom =  "5px";
+    let scaleMax = addScale();
+    let barHeightUnit = 500 / scaleMax;
+    let barHeight = valuesArray[i] * barHeightUnit;
+    document.getElementById(`bar ${i}`).style.height =  `${barHeight}px`;
+    leftOffset += 50;
   };
 }
