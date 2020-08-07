@@ -49,3 +49,12 @@ let addBar = function (){
   document.getElementById("xAxis").appendChild(newDiv);
   newDiv.setAttribute(`id`, `bar`);
 }
+
+// 4. add label to each bar
+let addLabel = function(i){
+  let newDiv = createDiv();
+  newDiv.setAttribute(`id`, `dataLabel ${i}`);
+  newDiv.setAttribute("class", "dataLabel");
+  document.getElementById(`bar ${i}`).appendChild(newDiv);
+  document.getElementById(`dataLabel ${i}`).innerHTML = valuesArray[i];
+}

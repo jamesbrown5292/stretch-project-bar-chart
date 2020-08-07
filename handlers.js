@@ -93,5 +93,6 @@ let generateGraph = function(){
     let barHeight = valuesArray[i] * barHeightUnit;
     document.getElementById(`bar ${i}`).style.height =  `${barHeight}px`;
     leftOffset += 54;
+    let label = addLabel(i);
   };
 }

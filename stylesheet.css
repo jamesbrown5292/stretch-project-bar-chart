@@ -19,3 +19,11 @@
   background: black;
   border: 2px solid white;
 }
+
+.dataLabel {
+  height: 16px;
+  background: blue;
+  position: absolute;
+  top: -10px;
+
+}
