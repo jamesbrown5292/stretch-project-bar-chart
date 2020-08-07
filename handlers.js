@@ -74,7 +74,8 @@ let submitData = function (){
 
 let generateGraph = function(){
   let generateGraphButton = document.getElementById("generateGraphButton");
-  drawAxes();
-
-
+  let bg = drawBackground();
+  let scale = addScale();
+  let yAxis = drawYAxis();
+  let xAxis = drawXAxis();
 }

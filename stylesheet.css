@@ -6,21 +6,21 @@
 }
 
 .line#yAxis {
-  width: 5px;
-  height: 490px;
-  background: black;
   position: relative;
   left: 10px;
   bottom: 0px;
+  height: 500px;
+  width: 5px;
+  background-color: black;
 }
 
 .line#xAxis {
-  width: 490px;
-  height: 5px;
-  background: black;
   position: relative;
   left: 10px;
   bottom: 0px;
+  height: 5px;
+  width: 500px;
+  background-color: black;
 }
 
 .lineMarker#LM1 {
