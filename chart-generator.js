@@ -60,5 +60,20 @@ let addLabel = function(i){
   newDiv.setAttribute("class", "dataLabel");
   document.getElementById(`bar ${i}`).appendChild(newDiv);
   document.getElementById(`dataLabel ${i}`).innerHTML = itemsArray[i];
+}
+
+//5. Add value label to each bar
+
+let addValueLabel = function(i){
+  let newDiv = createDiv();
+  newDiv.setAttribute(`id`, `dataValueLabel ${i}`);
+  newDiv.setAttribute("class", "dataValueLabel");
+  document.getElementById(`bar ${i}`).appendChild(newDiv);
+  document.getElementById(`dataValueLabel ${i}`).innerHTML = valuesArray[i];
+  document.getElementById(`dataValueLabel ${i}`).style.position = "absolute";
+  document.getElementById(`dataValueLabel ${i}`).style.top = "-16px";
+  let labelOffset = (500 / valuesArray.length) / 2;
+  document.getElementById(`dataValueLabel ${i}`).style.left = `${labelOffset}px`;
+  document.getElementById(`dataValueLabel ${i}`).style.bottom = "2px";
 
 }

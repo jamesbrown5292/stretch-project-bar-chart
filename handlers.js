@@ -96,5 +96,7 @@ let generateGraph = function(){
     document.getElementById(`bar ${i}`).style.width =  `${barWidth}px`;
     leftOffset += barWidth;
     let label = addLabel(i);
+    let valueLabel = addValueLabel(i);
+
   };
 }
