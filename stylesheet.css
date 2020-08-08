@@ -1,7 +1,7 @@
 /*STYLESHEET*/
 
 #yAxis {
-  height: 500px;
+  height: 600px;
   width: 5px;
   background: black;
 
@@ -9,21 +9,21 @@
 
 #xAxis {
   height: 5px;
-  width: 500px;
+  width: 600px;
   background: black;
   position: absolute;
 }
 
 .bar {
-  width: 50px;
   background: black;
   border: 2px solid white;
 }
 
 .dataLabel {
   height: 16px;
-  background: blue;
+  background: white;
   position: absolute;
-  bottom: -10px;
+  bottom: -30px;
+
 
 }

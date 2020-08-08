@@ -92,7 +92,9 @@ let generateGraph = function(){
     let barHeightUnit = 500 / scaleMax;
     let barHeight = valuesArray[i] * barHeightUnit;
     document.getElementById(`bar ${i}`).style.height =  `${barHeight}px`;
-    leftOffset += 54;
+    let barWidth = (500 / valuesArray.length) - 4;
+    document.getElementById(`bar ${i}`).style.width =  `${barWidth}px`;
+    leftOffset += barWidth;
     let label = addLabel(i);
   };
 }

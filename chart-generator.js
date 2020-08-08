@@ -19,7 +19,7 @@ let drawXAxis = function(){
 }
 
 // Determine the max value of the yAxis, divide the y axis up into units
-let addScale = function(){
+let addScale = function(){ //problem - this does not work if data values jump between orders of magnitude
   maxVal  = valuesArray[0];
   for (let i=1; i<= valuesArray.length; i++){
     if (valuesArray[i] > maxVal){
@@ -43,11 +43,14 @@ let getMaxVal = function(){
 };
 
 // 3. add a data bar to the chart
+
+
 let addBar = function (){
   let newDiv = createDiv();
   newDiv.setAttribute("class", "bar");
   document.getElementById("xAxis").appendChild(newDiv);
   newDiv.setAttribute(`id`, `bar`);
+
 }
 
 // 4. add label to each bar
@@ -57,4 +60,5 @@ let addLabel = function(i){
   newDiv.setAttribute("class", "dataLabel");
   document.getElementById(`bar ${i}`).appendChild(newDiv);
   document.getElementById(`dataLabel ${i}`).innerHTML = itemsArray[i];
+
 }
