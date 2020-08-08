@@ -51,9 +51,6 @@ let addScaleMarkers = function(){
     let barHeightUnit = 500 / scaleMax
     markHeight += 20 * barHeightUnit;
   }
-
-
-
 }
 
 //Get max value
@@ -101,3 +98,11 @@ let addValueLabel = function(i){
   document.getElementById(`dataValueLabel ${i}`).style.bottom = "2px";
 
 }
+
+//Add the graph title
+let addTitle = () => {
+  let chartTitle = document.querySelector("#chartTitle");
+  let chartHeading = chartTitle;
+  chartHeading = document.querySelector("#yAxis").appendChild(chartHeading);
+  chartHeading.setAttribute("id", "chartHeading")
+};

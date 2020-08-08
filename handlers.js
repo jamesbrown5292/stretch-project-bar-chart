@@ -97,6 +97,7 @@ let generateGraph = function(){
     leftOffset += barWidth;
     let label = addLabel(i);
     let valueLabel = addValueLabel(i);
-
   };
+  let scaleMarkers = addScaleMarkers();
+  let chartHeading = addTitle()
 }
