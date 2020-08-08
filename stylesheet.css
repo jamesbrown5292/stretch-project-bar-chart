@@ -26,3 +26,12 @@
   bottom: -30px;
 }
 
+.scaleMarkerContainer {
+  position: absolute;
+}
+
+.scaleMarker {
+  background: black;
+  height: 5px;
+  width: 20px;
+}

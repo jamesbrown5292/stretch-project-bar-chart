@@ -32,6 +32,30 @@ let addScale = function(){ //problem - this does not work if data values jump be
   return scaleMax;
 };
 
+let addScaleMarkers = function(){
+  let markHeight = 0;
+  let scaleMarkerContainer = createDiv();
+  scaleMarkerContainer = document.getElementById("yAxis").appendChild(scaleMarkerContainer).setAttribute("class", "scaleMarkerContainer");
+  document.getElementsByClassName("scaleMarkerContainer")[0].setAttribute("id", "scaleMarkerContainer")
+
+  for (let i=0; i < 5; i++){ //do this 5 times:
+    let scaleMarker = createDiv();
+    scaleMarker = document.getElementById("scaleMarkerContainer").appendChild(scaleMarker).setAttribute(`id`, `scaleMarker ${i}`);;
+    scaleMarker = document.getElementById(`scaleMarker ${i}`)
+    scaleMarker.setAttribute("class", "scaleMarker");
+    scaleMarker.style.position = "absolute";
+    scaleMarker.style.top = `${markHeight}px`;
+    scaleMarker.style.left = `-15px`;
+
+    let scaleMax = addScale()
+    let barHeightUnit = 500 / scaleMax
+    markHeight += 20 * barHeightUnit;
+  }
+
+
+
+}
+
 //Get max value
 let getMaxVal = function(){
   let maxVal  = valuesArray[0];
